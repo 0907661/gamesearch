@@ -13,6 +13,16 @@ namespace GameSearch
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            /*routes.MapRoute(
+                "GamesByReleaseDate",
+                "games/released/{year}/{month}",
+                new { controller = "Games", action = "ByReleaseDate" },
+                new { year = @"\d{4}", month = @"\d{2}" }
+                );
+                */
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
