@@ -11,28 +11,19 @@ namespace GameSearch.Controllers
     public class GamesController : Controller
     {
         // GET: Games
-        public ActionResult Random()
+        public ViewResult Index()
         {
-            var game = new Game() { Name = "RuneScape" };
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Jimmy"},
-                new Customer {Name = "Danny"}
-            };
-
-            var viewModel = new RandomGameViewModel
-            {
-                Game = game,
-                Customers = customers
-            };
-
-            return View(viewModel);
+            var games = GetGames();
+            return View(games);
         }
 
-        [Route("games/released/{month:regex(\\d{2}):range(1,12)}/{year:regex(\\d{4})}")]
-        public ActionResult ByReleaseDate(int month, int year)
+        private IEnumerable<Game> GetGames()
         {
-            return Content(month + "/" + year);
+            return new List<Game>
+            {
+                new Game {Id = 1, Name = "Oldschool Runescape"},
+                new Game {Id = 2, Name = "Runescape 3"}
+            };
         }
     }
 }
