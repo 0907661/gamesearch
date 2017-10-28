@@ -7,13 +7,13 @@ namespace GameSearch.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AppliedAnnotationsToCustomerName : IMigrationMetadata
+    public sealed partial class AddNameToMembershipTypes : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AppliedAnnotationsToCustomerName));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNameToMembershipTypes));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709291039027_AppliedAnnotationsToCustomerName"; }
+            get { return "201710281146542_AddNameToMembershipTypes"; }
         }
         
         string IMigrationMetadata.Source
