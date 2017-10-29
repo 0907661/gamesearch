@@ -5,25 +5,43 @@ using System.Web;
 using System.Web.Mvc;
 using GameSearch.Models;
 using GameSearch.ViewModels;
+using System.Data.Entity;
 
 namespace GameSearch.Controllers
 {
     public class GamesController : Controller
     {
-        // GET: Games
+        private ApplicationDbContext _context;
+
+        public GamesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ViewResult Index()
         {
-            var games = GetGames();
+            var games = _context.Games.Include(g => g.Genre).ToList();
+
             return View(games);
         }
 
-        private IEnumerable<Game> GetGames()
+        /*public ActionResult Details(int id)
         {
-            return new List<Game>
-            {
-                new Game {Id = 1, Name = "Oldschool Runescape"},
-                new Game {Id = 2, Name = "Runescape 3"}
-            };
-        }
+            var game = _context.Games.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            if (game == null)
+                return HttpNotFound();
+
+            return View(game);
+
+        }*/
+
+
+
     }
 }

@@ -5,12 +5,9 @@ using System.Web;
 
 namespace GameSearch.Models
 {
-    public class Game
+    public class Genre
     {
-        public int Id { get; set; }
+        public byte Id { get; set; }
         public string Name { get; set; }
-        public Genre Genre { get; set; }
     }
-
-
 }
