@@ -11,7 +11,6 @@ namespace GameSearch.Migrations
             Sql("INSERT INTO Games (Name) VALUES ('Final Fantasy')");
             Sql("INSERT INTO Games (Name) VALUES ('CS: GO')");
             Sql("INSERT INTO Games (Name) VALUES ('Halo')");
-
         }
         
         public override void Down()

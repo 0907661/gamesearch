@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using GameSearch.Models;
 using GameSearch.ViewModels;
 using System.Data.Entity;
+using GameSearch.Migrations;
 
 namespace GameSearch.Controllers
 {
@@ -23,25 +24,20 @@ namespace GameSearch.Controllers
             _context.Dispose();
         }
 
+        private IEnumerable<Game> GetGames()
+            {
+            return new List<Game>
+            {
+                new Game { Id = 1, Name = "Runescape", Genre = "MMORPG"},
+                new Game { Id = 2, Name = "CS:GO", Genre = "FPS"}
+                    };
+            }
+
         public ViewResult Index()
         {
-            var games = _context.Games.ToList();
+            var games = GetGames();
 
             return View(games);
         }
-
-        /*public ActionResult Details(int id)
-        {
-            var game = _context.Games.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
-
-            if (game == null)
-                return HttpNotFound();
-
-            return View(game);
-
-        }*/
-
-
-
     }
 }

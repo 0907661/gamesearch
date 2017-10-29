@@ -249,10 +249,6 @@
     <Compile Include="Migrations\201710291240538_PopulateGenre.Designer.cs">
       <DependentUpon>201710291240538_PopulateGenre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710291250116_PopulateGames.cs" />
-    <Compile Include="Migrations\201710291250116_PopulateGames.Designer.cs">
-      <DependentUpon>201710291250116_PopulateGames.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201710291302434_AddGenreToGames.cs" />
     <Compile Include="Migrations\201710291302434_AddGenreToGames.Designer.cs">
       <DependentUpon>201710291302434_AddGenreToGames.cs</DependentUpon>
@@ -281,10 +277,39 @@
     <Compile Include="Migrations\201710291556085_ChangedNameOfNewCustomerForm.Designer.cs">
       <DependentUpon>201710291556085_ChangedNameOfNewCustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710291742172_AddedGenreModel1.cs" />
+    <Compile Include="Migrations\201710291742172_AddedGenreModel1.Designer.cs">
+      <DependentUpon>201710291742172_AddedGenreModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710291810487_DeleteGamesData.cs" />
+    <Compile Include="Migrations\201710291810487_DeleteGamesData.Designer.cs">
+      <DependentUpon>201710291810487_DeleteGamesData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710291812584_PopulateGames.cs" />
+    <Compile Include="Migrations\201710291812584_PopulateGames.Designer.cs">
+      <DependentUpon>201710291812584_PopulateGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710291818518_ViewGames.cs" />
+    <Compile Include="Migrations\201710291818518_ViewGames.Designer.cs">
+      <DependentUpon>201710291818518_ViewGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710292009573_NewGamesApproach.cs" />
+    <Compile Include="Migrations\201710292009573_NewGamesApproach.Designer.cs">
+      <DependentUpon>201710292009573_NewGamesApproach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710292033074_AddedSimpleValidation.cs" />
+    <Compile Include="Migrations\201710292033074_AddedSimpleValidation.Designer.cs">
+      <DependentUpon>201710292033074_AddedSimpleValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710292042460_AddedClientSideValidation.cs" />
+    <Compile Include="Migrations\201710292042460_AddedClientSideValidation.Designer.cs">
+      <DependentUpon>201710292042460_AddedClientSideValidation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -353,9 +378,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -413,9 +438,6 @@
     <EmbeddedResource Include="Migrations\201710291240538_PopulateGenre.resx">
       <DependentUpon>201710291240538_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710291250116_PopulateGames.resx">
-      <DependentUpon>201710291250116_PopulateGames.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710291302434_AddGenreToGames.resx">
       <DependentUpon>201710291302434_AddGenreToGames.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +458,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710291556085_ChangedNameOfNewCustomerForm.resx">
       <DependentUpon>201710291556085_ChangedNameOfNewCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291742172_AddedGenreModel1.resx">
+      <DependentUpon>201710291742172_AddedGenreModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291810487_DeleteGamesData.resx">
+      <DependentUpon>201710291810487_DeleteGamesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291812584_PopulateGames.resx">
+      <DependentUpon>201710291812584_PopulateGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291818518_ViewGames.resx">
+      <DependentUpon>201710291818518_ViewGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710292009573_NewGamesApproach.resx">
+      <DependentUpon>201710292009573_NewGamesApproach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710292033074_AddedSimpleValidation.resx">
+      <DependentUpon>201710292033074_AddedSimpleValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710292042460_AddedClientSideValidation.resx">
+      <DependentUpon>201710292042460_AddedClientSideValidation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
