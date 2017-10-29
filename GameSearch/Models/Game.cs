@@ -9,7 +9,7 @@ namespace GameSearch.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Genre Genre { get; set; }
+        public string Genre { get; set; }
     }
 
 

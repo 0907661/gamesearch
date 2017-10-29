@@ -25,7 +25,7 @@ namespace GameSearch.Controllers
 
         public ViewResult Index()
         {
-            var games = _context.Games.Include(g => g.Genre).ToList();
+            var games = _context.Games.ToList();
 
             return View(games);
         }
