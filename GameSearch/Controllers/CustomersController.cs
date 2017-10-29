@@ -34,6 +34,7 @@ namespace GameSearch.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
@@ -66,7 +67,9 @@ namespace GameSearch.Controllers
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
-            return View(customers);
+            if (User.IsInRole("Admin"))
+                return View(customers);
+            return null;
         }
 
         public ActionResult Details(int id)
