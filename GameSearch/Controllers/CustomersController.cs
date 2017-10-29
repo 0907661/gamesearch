@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GameSearch.Models;
+using GameSearch.ViewModels;
 
 namespace GameSearch.Controllers
 {
@@ -24,6 +25,18 @@ namespace GameSearch.Controllers
 
         public ActionResult New()
         {
+            var membershiptypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershiptypes
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
+        {
+
             return View();
         }
 
