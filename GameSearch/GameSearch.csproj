@@ -221,6 +221,14 @@
     <Compile Include="Migrations\201710281146542_AddNameToMembershipTypes.Designer.cs">
       <DependentUpon>201710281146542_AddNameToMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710291056452_ReplacedDiscountRateWithName.cs" />
+    <Compile Include="Migrations\201710291056452_ReplacedDiscountRateWithName.Designer.cs">
+      <DependentUpon>201710291056452_ReplacedDiscountRateWithName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710291121008_ChangeNamePropToString.cs" />
+    <Compile Include="Migrations\201710291121008_ChangeNamePropToString.Designer.cs">
+      <DependentUpon>201710291121008_ChangeNamePropToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -329,6 +337,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710281146542_AddNameToMembershipTypes.resx">
       <DependentUpon>201710281146542_AddNameToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291056452_ReplacedDiscountRateWithName.resx">
+      <DependentUpon>201710291056452_ReplacedDiscountRateWithName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710291121008_ChangeNamePropToString.resx">
+      <DependentUpon>201710291121008_ChangeNamePropToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
